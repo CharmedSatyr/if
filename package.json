@@ -1,5 +1,5 @@
 {
-  "name": "if",
+  "name": "@charmed/if",
   "version": "0.0.1",
   "description": "If/else/then/unless conditions in React",
   "main": "if.js",
