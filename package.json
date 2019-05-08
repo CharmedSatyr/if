@@ -1,21 +1,44 @@
 {
   "name": "react-ifs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "If/else/then/unless conditions in React",
-  "main": "if.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0",
-    "lint": "eslint '**/*.js'"
-  },
+  "main": "",
+  "author": "CharmedSatyr <z@charmed.tech>",
+  "license": "GPL-3.0-or-later",
+  "homepage": "https://github.com/CharmedSatyr/react-ifs#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CharmedSatyr/react-ifs.git"
   },
-  "keywords": [],
-  "author": "CharmedSatyr <z@charmed.tech>",
-  "license": "GPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/CharmedSatyr/react-ifs/issues"
   },
-  "homepage": "https://github.com/CharmedSatyr/react-ifs#readme"
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "scripts": {
+    "lint": "eslint '**/*'",
+    "build": "npx babel src/index.js --out-file if.js"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/preset-react": "^7.0.0"
+  }
 }

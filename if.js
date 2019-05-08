@@ -1,10 +1,6 @@
 import React, { Fragment } from 'react';
+import ReactDOM from 'react-dom';
 
-const If = props =>
-  props.condition ? (
-    <Fragment>{props.then || props.children}</Fragment>
-  ) : (
-    <Fragment>{props.unless || props.else || null}</Fragment>
-  );
+const If = props => props.condition ? React.createElement(Fragment, null, props.then || props.children) : React.createElement(Fragment, null, props.unless || props.else || null);
 
-export default If;
+ReactDOM.render(React.createElement(If, null), document.getElementById('root'));
