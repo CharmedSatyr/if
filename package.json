@@ -9,13 +9,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CharmedSatyr/if.git"
+    "url": "git+https://github.com/CharmedSatyr/react-ifs.git"
   },
   "keywords": [],
   "author": "CharmedSatyr <z@charmed.tech>",
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/CharmedSatyr/if/issues"
+    "url": "https://github.com/CharmedSatyr/react-ifs/issues"
   },
-  "homepage": "https://github.com/CharmedSatyr/if#readme"
+  "homepage": "https://github.com/CharmedSatyr/react-ifs#readme"
 }
