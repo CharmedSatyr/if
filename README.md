@@ -1,5 +1,7 @@
 # react-ifs
 
+[![Build Status](https://travis-ci.com/CharmedSatyr/react-ifs.svg?branch=master)](https://travis-ci.com/CharmedSatyr/react-ifs)
+
 This package provides a simple conditional logic wrapper for React components. It exports a function component, `If`.
 
 `If` requires a `condition` prop and either child elements or a `then` prop. It accepts optional `else` and `unless` props. It returns a single unmodified prop value based on the combination of props it has received.
