@@ -24,7 +24,7 @@
     "react-dom": "^16.8.6"
   },
   "scripts": {
-    "build": "babel src --out-dir lib",
+    "build": "babel src/if.js --out-dir lib",
     "test": "jest --coverage --verbose",
     "lint": "eslint '**/*'"
   },
