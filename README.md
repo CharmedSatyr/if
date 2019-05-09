@@ -1,8 +1,10 @@
 # react-ifs
 
-This package provides a simple conditional logic wrapper for React components. It has a single default export, an `If` component.
+This package provides a simple conditional logic wrapper for React components. It exports a function component, `If`.
 
-`If` accepts child elements and `then`, `else`, and `unless` props and returns a value based on its `condition` prop.
+`If` requires a `condition` prop and either child elements or a `then` prop. It accepts optional `else` and `unless` props. It returns a single unmodified prop value based on the props it has received.
+
+The package is intended as a reusable drop-in to clean up repetitive conditional assignments in dynamic React applications.
 
 ## API
 
@@ -75,7 +77,7 @@ import If from 'react-ifs';
 <If condition={false} then={<Foo />} else={<Bar />} unless={<Baz />} />
 ```
 
-`<Baz />` will be returned.
+`<Baz />` will be returned if it evaluates to truthy.
 \
 \
 &nbsp;
