@@ -1,56 +1,107 @@
-### react-ifs
+# react-ifs
 
-This package provides a simple conditional logic wrapper for React components.
+This package provides a simple conditional logic wrapper for React components. It has a single default export, an `If` component.
 
-It accepts `condition`, `then`, `else`, and `unless` props as well as child elements.
+`If` accepts child elements and `then`, `else`, and `unless` props and returns a value based on its `condition` prop.
 
-Import to your React project:
+## API
+
+### Installation
+
+`npm i react-ifs` or `yarn add react-ifs`
+
+&nbsp;
+
+### Import to your React project
 
 ```
 import React from 'react';
 import If from 'react-ifs';
 ```
 
-#### Example 0: If/children
+&nbsp;
+
+### If/children
 
 ```
 <If condition={true}>
-  Content!
+  <Foo />
 </If>
 ```
 
-`Content!` will be displayed.
+`<Foo />` will be returned. If the `condition` evaluates to `false`, `null` will be returned.
+\
+\
+&nbsp;
 
-#### Example 1: If/then
+### If/then
 
 ```
-<If condition={true} then={'Override children'}>
-  Content!
+<If condition={true} then={<Foo />} />
+```
+
+`<Foo />` will be returned. As above, if the `condition` evaluates to `false`, `null` will be returned.
+\
+\
+&nbsp;
+
+### If/then (`then` overrides children)
+
+```
+<If condition={true} then={<Foo />}>
+  <Bar />
 </If>
 ```
 
-`Override children` will be displayed.
+`<Foo />` will be returned.
+\
+\
+&nbsp;
 
-#### Example 2: If/else
-
-```
-<If condition={false} else={'fallback'}>
-  Content!
-</If>
-```
-
-`fallback` will be displayed.
-
-#### Example 3: If/else/unless
+### If/else
 
 ```
-<If condition={false}
-  then={'Override children'}
-  else={'fallback'}
-  unless={"I'm here"}
->
-  Content!
-</If>
+<If condition={false} then={<Foo />} else={<Bar />} />
 ```
 
-`I'm here` will be displayed.
+`<Bar />` will be returned.
+\
+\
+&nbsp;
+
+### If/else/unless
+
+```
+<If condition={false} then={<Foo />} else={<Bar />} unless={<Baz />} />
+```
+
+`<Baz />` will be returned.
+\
+\
+&nbsp;
+
+## Example Use Case
+
+```
+import React from 'react';
+import If from 'react-ifs';
+
+import Demo from './demo';
+import MemberContent from './member-content';
+
+const Page = props => {
+
+  const trial = props.promotional ? <MemberContent /> : null;
+
+  return (
+    <If
+      condition={props.subscribed}
+      then={<MemberContent />}
+      else={<Demo />}
+      unless={trial}
+    />
+  );
+};
+
+export default Page;
+```
