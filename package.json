@@ -6,6 +6,12 @@
   "author": "CharmedSatyr <z@charmed.tech>",
   "license": "GPL-3.0-or-later",
   "homepage": "https://github.com/CharmedSatyr/react-ifs#readme",
+  "keywords": [
+    "react",
+    "react-component",
+    "if",
+    "conditional"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CharmedSatyr/react-ifs.git"
