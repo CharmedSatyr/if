@@ -14,7 +14,7 @@ The package is intended as a reusable drop-in to clean up repetitive conditional
 
 &nbsp;
 
-### Import to your React project
+### Import to React project
 
 ```
 import React from 'react';
