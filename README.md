@@ -6,22 +6,25 @@ This package provides a simple conditional logic wrapper for React components. I
 
 The package is intended as a reusable drop-in to clean up repetitive conditional assignments in dynamic React applications.
 
-## API
-
-### Installation
-
-`npm i react-ifs` or `yarn add react-ifs`
-
-&nbsp;
-
-### Import to React project
+## Install
 
 ```
-import React from 'react';
+npm i react-ifs
+```
+
+or
+
+```
+yarn add react-ifs
+```
+
+## Import
+
+```
 import If from 'react-ifs';
 ```
 
-&nbsp;
+## API
 
 ### If/children
 
@@ -82,7 +85,7 @@ import If from 'react-ifs';
 \
 &nbsp;
 
-## Example Use Case
+## Example
 
 ```
 import React from 'react';
