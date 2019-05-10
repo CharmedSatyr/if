@@ -1,7 +1,5 @@
 # react-ifs
 
-### Some Ifs for your app!
-
 [![NPM](https://nodei.co/npm/react-ifs.png)](https://nodei.co/npm/react-ifs/)
 
 [![Build Status](https://travis-ci.com/CharmedSatyr/react-ifs.svg?branch=master)](https://travis-ci.com/CharmedSatyr/react-ifs) [![dependencies](https://david-dm.org/charmedsatyr/react-ifs.png)](https://david-dm.org/charmedsatyr/react-ifs.svg)
@@ -9,7 +7,7 @@
 
 This package provides a simple conditional logic wrapper for React components. It exports a function component, `If`.
 
-`If` requires a `condition` prop and either child elements or a `then` prop. It accepts optional `else` and `unless` props. It returns a single unmodified prop value based on the combination of props it has received.
+`If` requires a `condition` prop and either child elements or a `then` prop. It accepts optional `else` and `unless` props. It returns a single, unmodified prop value based on the combination of props it has received.
 
 The package is intended as a reusable drop-in to clean up repetitive conditional assignments in dynamic React applications.
 
@@ -41,7 +39,8 @@ import If from 'react-ifs';
 </If>
 ```
 
-`<Foo />` will be returned. If the `condition` evaluates to `false`, `null` will be returned.
+`<Foo />` will be returned. If the `condition` evaluates to `false`, `null` will be returned. If the condition evaluates to false, `null` will be returned.
+
 \
 \
 &nbsp;
