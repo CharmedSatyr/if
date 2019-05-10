@@ -1,6 +1,11 @@
 # react-ifs
 
-[![Build Status](https://travis-ci.com/CharmedSatyr/react-ifs.svg?branch=master)](https://travis-ci.com/CharmedSatyr/react-ifs)
+### Some Ifs for your app!
+
+[![NPM](https://nodei.co/npm/react-ifs.png)](https://nodei.co/npm/react-ifs/)
+
+[![Build Status](https://travis-ci.com/CharmedSatyr/react-ifs.svg?branch=master)](https://travis-ci.com/CharmedSatyr/react-ifs) [![dependencies](https://david-dm.org/charmedsatyr/react-ifs.png)](https://david-dm.org/charmedsatyr/react-ifs.svg)
+![GitHub issues](https://img.shields.io/github/issues/charmedsatyr/react-ifs.svg) [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) ![Keybase PGP](https://img.shields.io/keybase/pgp/charmedsatyr.svg)
 
 This package provides a simple conditional logic wrapper for React components. It exports a function component, `If`.
 
@@ -10,19 +15,19 @@ The package is intended as a reusable drop-in to clean up repetitive conditional
 
 ## Install
 
-```
+```bash
 npm i react-ifs
 ```
 
 or
 
-```
+```bash
 yarn add react-ifs
 ```
 
 ## Import
 
-```
+```javascript
 import If from 'react-ifs';
 ```
 
@@ -30,7 +35,7 @@ import If from 'react-ifs';
 
 ### If/children
 
-```
+```javascript
 <If condition={true}>
   <Foo />
 </If>
@@ -43,7 +48,7 @@ import If from 'react-ifs';
 
 ### If/then
 
-```
+```javascript
 <If condition={true} then={<Foo />} />
 ```
 
@@ -54,7 +59,7 @@ import If from 'react-ifs';
 
 ### If/then + children → `then` overrides children
 
-```
+```javascript
 <If condition={true} then={<Foo />}>
   <Bar />
 </If>
@@ -67,7 +72,7 @@ import If from 'react-ifs';
 
 ### If/else
 
-```
+```javascript
 <If condition={false} then={<Foo />} else={<Bar />} />
 ```
 
@@ -78,7 +83,7 @@ import If from 'react-ifs';
 
 ### If/else/unless
 
-```
+```javascript
 <If condition={false} then={<Foo />} else={<Bar />} unless={<Baz />} />
 ```
 
@@ -93,7 +98,7 @@ import If from 'react-ifs';
 
 Either a login form or a logout button is displayed depending on `loggedIn` prop.
 
-```
+```javascript
 import React from 'react';
 import If from 'react-ifs';
 
@@ -117,7 +122,7 @@ export default Login;
 
 The content that renders depends on both `subscribed` and `promotional` props.
 
-```
+```javascript
 import React from 'react';
 import If from 'react-ifs';
 
@@ -125,7 +130,6 @@ import Demo from './demo';
 import MemberContent from './member-content';
 
 const Page = props => {
-
   const trial = props.promotional ? <MemberContent /> : null;
 
   return (
@@ -147,7 +151,7 @@ export default Page;
 
 One menu renders depending on the `time_of_day` prop.
 
-```
+```javascript
 import React from 'react';
 import If from 'react-ifs';
 
@@ -171,7 +175,7 @@ const Menu = props => {
       </If>
     </>
   );
-}
+};
 
 export default Menu;
 ```
