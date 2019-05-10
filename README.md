@@ -96,7 +96,7 @@ import If from 'react-ifs';
 
 ### Login
 
-Either a login form or a logout button is displayed depending on `loggedIn` prop.
+Either a login form or a logout button is displayed depending on the `loggedIn` prop.
 
 ```javascript
 import React from 'react';
