@@ -2,14 +2,15 @@
 
 [![NPM](https://nodei.co/npm/react-ifs.png)](https://nodei.co/npm/react-ifs/)
 
-[![Build Status](https://travis-ci.com/CharmedSatyr/react-ifs.svg?branch=master)](https://travis-ci.com/CharmedSatyr/react-ifs) [![dependencies](https://david-dm.org/charmedsatyr/react-ifs.png)](https://david-dm.org/charmedsatyr/react-ifs.svg)
-![GitHub issues](https://img.shields.io/github/issues/charmedsatyr/react-ifs.svg) [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) ![Keybase PGP](https://img.shields.io/keybase/pgp/charmedsatyr.svg)
+[![Build Status](https://travis-ci.com/CharmedSatyr/react-ifs.svg?branch=master)](https://travis-ci.com/CharmedSatyr/react-ifs) [![dependencies](https://david-dm.org/charmedsatyr/react-ifs.png)](https://david-dm.org/charmedsatyr/react-ifs.svg) [![GitHub issues](https://img.shields.io/github/issues/charmedsatyr/react-ifs.svg)](https://github.com/CharmedSatyr/react-ifs/issues) [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![Keybase PGP](https://img.shields.io/keybase/pgp/charmedsatyr.svg)](https://keybase.io/charmedsatyr)
 
 This package provides a simple conditional logic wrapper for React components. It exports a function component, `If`.
 
 `If` requires a `condition` prop and either child elements or a `then` prop. It accepts optional `else` and `unless` props. It returns a single, unmodified prop value based on the combination of props it has received.
 
 The package is intended as a reusable drop-in to clean up repetitive conditional assignments in dynamic React applications.
+
+&nbsp;
 
 ## Install
 
@@ -23,11 +24,15 @@ or
 yarn add react-ifs
 ```
 
+&nbsp;
+
 ## Import
 
 ```javascript
 import If from 'react-ifs';
 ```
+
+&nbsp;
 
 ## API
 
@@ -41,8 +46,6 @@ import If from 'react-ifs';
 
 `<Foo />` will be returned. If the `condition` evaluates to `false`, `null` will be returned. If the condition evaluates to false, `null` will be returned.
 
-\
-\
 &nbsp;
 
 ### If/then
