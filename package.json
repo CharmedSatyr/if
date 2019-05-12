@@ -1,6 +1,6 @@
 {
   "name": "react-ifs",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "If/else/then/unless conditions in React",
   "main": "lib/if.js",
   "author": "CharmedSatyr <z@charmed.tech>",
