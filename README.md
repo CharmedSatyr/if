@@ -2,7 +2,7 @@
 
 [![NPM](https://nodei.co/npm/react-ifs.png)](https://nodei.co/npm/react-ifs/)
 
-[![Build Status](https://travis-ci.com/CharmedSatyr/react-ifs.svg?branch=master)](https://travis-ci.com/CharmedSatyr/react-ifs) [![dependencies](https://david-dm.org/charmedsatyr/react-ifs.png)](https://david-dm.org/charmedsatyr/react-ifs.svg) [![GitHub issues](https://img.shields.io/github/issues/charmedsatyr/react-ifs.svg)](https://github.com/CharmedSatyr/react-ifs/issues) [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![Keybase PGP](https://img.shields.io/keybase/pgp/charmedsatyr.svg)](https://keybase.io/charmedsatyr)
+[![Build Status](https://travis-ci.com/CharmedSatyr/react-ifs.svg?branch=master)](https://travis-ci.com/CharmedSatyr/react-ifs) [![Coverage Status](https://coveralls.io/repos/github/CharmedSatyr/react-ifs/badge.svg?branch=master)](https://coveralls.io/github/CharmedSatyr/react-ifs?branch=master) [![dependencies](https://david-dm.org/charmedsatyr/react-ifs.png)](https://david-dm.org/charmedsatyr/react-ifs.svg) [![Known Vulnerabilities](https://snyk.io/test/github/charmedsatyr/react-ifs/badge.svg)](https://snyk.io/test/github/charmedsatyr/react-ifs) [![GitHub issues](https://img.shields.io/github/issues/charmedsatyr/react-ifs.svg)](https://github.com/CharmedSatyr/react-ifs/issues) [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![Keybase PGP](https://img.shields.io/keybase/pgp/charmedsatyr.svg)](https://keybase.io/charmedsatyr)
 
 This package provides a simple conditional logic wrapper for React components. It exports a function component, `If`.
 
@@ -55,8 +55,7 @@ import If from 'react-ifs';
 ```
 
 `<Foo />` will be returned. As above, if the `condition` evaluates to `false`, `null` will be returned.
-\
-\
+
 &nbsp;
 
 ### If/then + children → `then` overrides children
@@ -68,8 +67,7 @@ import If from 'react-ifs';
 ```
 
 `<Foo />` will be returned.
-\
-\
+
 &nbsp;
 
 ### If/else
@@ -79,8 +77,7 @@ import If from 'react-ifs';
 ```
 
 `<Bar />` will be returned.
-\
-\
+
 &nbsp;
 
 ### If/else/unless
@@ -90,8 +87,7 @@ import If from 'react-ifs';
 ```
 
 `<Baz />` will be returned if it evaluates to truthy.
-\
-\
+
 &nbsp;
 
 ## Examples
@@ -107,13 +103,11 @@ import If from 'react-ifs';
 import LoginForm from './login-form';
 import LogoutButton from './logout-button';
 
-const Login = props => {
-  return (
-    <If condition={!props.loggedIn} else={<LogoutButton />}>
-      <LoginForm />
-    </If>
-  );
-};
+const Login = props => (
+  <If condition={!props.loggedIn} else={<LogoutButton />}>
+    <LoginForm />
+  </If>
+);
 
 export default Login;
 ```
@@ -161,23 +155,15 @@ import BreakfastMenu from './breakfast-menu';
 import LunchMenu from './lunch-menu';
 import DinnerMenu from './dinner-menu';
 
-const Menu = props => {
-  return (
-    <>
-      <If condition={props.time_of_day === 'morning'}>
-        <BreakfastMenu />
-      </If>
+const Menu = props => (
+  <>
+    <If condition={props.time_of_day === 'morning'} then={<BreakfastMenu />} />
 
-      <If condition={props.time_of_day === 'midday'}>
-        <LunchMenu />
-      </If>
+    <If condition={props.time_of_day === 'midday'} then={<LunchMenu />} />
 
-      <If condition={props.time_of_day === 'evening'}>
-        <DinnerMenu />
-      </If>
-    </>
-  );
-};
+    <If condition={props.time_of_day === 'evening'} then={<DinnerMenu />} />
+  </>
+);
 
 export default Menu;
 ```
